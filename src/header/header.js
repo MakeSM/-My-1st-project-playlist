@@ -11,7 +11,7 @@ export function renderHeader() {
 
    const titleHeader = document.createElement('h1');
    titleHeader.className = 'titleHeader';
-   titleHeader.innerHTML = 'InPlaylist';
+   titleHeader.innerText = 'InPlaylist';
    headerElement.appendChild(titleHeader);
 
    return headerElement;

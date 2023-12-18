@@ -1,0 +1,35 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+#root {
+	font-family: 'Red Hat Display', sans-serif;
+	font-style: normal;
+	line-height: normal;
+}
+
+/* style header */
+header {
+	width: 100%;
+	height: 48px;
+	background: rgba(26, 26, 26, 0.80);
+	backdrop-filter: blur(10px);
+	padding-left: 48px;
+	padding-top: 11px;
+	display: flex;
+	gap: 8px;
+}
+
+.imageHeaderWrapper {
+	width: 24px;
+	height: 24px;
+}
+
+.titleHeader{
+	color: #F6BD41;
+	color: #F6BD41;
+	font-size: 18px;
+	font-weight: 700;
+}

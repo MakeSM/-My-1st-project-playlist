@@ -1,14 +1,14 @@
-import { renderHeader } from './header/header.js';
+import { subscribe } from './data.js';
 import { renderMain } from './main-content/main.js';
 
 const rootElemnt = document.querySelector('#root');
 
 function renderApp() {
-   const headerElement = renderHeader();
-   rootElemnt.appendChild(headerElement);
+   rootElemnt.innerHTML = '';
 
-   const mainElement = renderMain();
-   rootElemnt.appendChild(mainElement);
+   rootElemnt.appendChild(renderMain());
 }
 
 renderApp();
+
+subscribe(renderApp);

@@ -13,13 +13,15 @@ export function renderInfoPanelRock() {
    infoPlayListWrapper.appendChild(namePlayList);
 
    const quantityDurationTrack = document.createElement('span');
-   quantityDurationTrack.innerText = '4 tracks, 12m 13s';
+   quantityDurationTrack.innerText = '4 tracks, 11m 5s';
    quantityDurationTrack.className = 'quantityDurationTrack';
    infoPlayListWrapper.appendChild(quantityDurationTrack);
 
    const quantityArtists = document.createElement('div');
-   quantityArtists.innerText = 'Три Дня Дождя';
+   quantityArtists.innerText =
+      'Три Дня Дождя' + ', ' + 'Luverance' + ', ' + 'saypink!';
    quantityArtists.className = 'quantityArtists';
+
    infoPlayListWrapper.appendChild(quantityArtists);
 
    return infoPlayListWrapper;

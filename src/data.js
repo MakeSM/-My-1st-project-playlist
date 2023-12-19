@@ -32,3 +32,52 @@ let songs = [
       url: '../style/assets/sound/saypink! - РЕБЕНОК САТАНЫ.mp3',
    },
 ];
+
+let searchTerm = '';
+
+let subscriber = null;
+let sortDirection = null;
+
+//publish-subscriber
+export function subscribe(subscriberCallback) {
+   subscriber = subscriberCallback;
+}
+
+//getter
+export function getSongs() {
+   const filteredSongs = songs.filter(
+      (s) =>
+         s.title.toLowerCase().indexOf(searchTerm) > -1 ||
+         s.artist.toLowerCase().indexOf(searchTerm) > -1
+   );
+   return filteredSongs;
+}
+
+//setter
+export function setSearchTherm(newSearchTerm) {
+   searchTerm = newSearchTerm.toLowerCase().trim();
+   subscriber();
+}
+
+//getter
+export function getSearchTherm() {
+   return searchTerm;
+}
+// getter/setter - инкапсуляция
+
+/**
+ * @param {'asc' | 'desc'} direction
+ */
+export function setSortDirection(direction) {
+   sortDirection = direction;
+   songs.sort((a, b) => {
+      if (direction === 'asc') return a.year - b.year;
+      return b.year - a.year;
+   });
+
+   subscriber();
+}
+
+export function getSortDirection() {
+   return sortDirection;
+}

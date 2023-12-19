@@ -6,14 +6,11 @@ export function renderSearch() {
    const searchWrapper = document.createElement('div');
    searchWrapper.className = 'searchWrapper';
 
-   const inputElement = renderInput();
-   searchWrapper.appendChild(inputElement);
+   searchWrapper.appendChild(renderInput());
 
-   const selectElement = renderSelectGenre();
-   searchWrapper.appendChild(selectElement);
+   searchWrapper.appendChild(renderSelectGenre());
 
-   const sortElement = renderSort();
-   searchWrapper.appendChild(sortElement);
+   searchWrapper.appendChild(renderSort());
 
    return searchWrapper;
 }

@@ -1,6 +1,6 @@
 import { renderSectionRock } from './section-one/section-rock.js';
 
-export function renderPlaylists() {
+export function renderPlaylistsWrapper() {
    const playlistsWrapper = document.createElement('div');
    playlistsWrapper.className = 'playlistsWrapper';
 

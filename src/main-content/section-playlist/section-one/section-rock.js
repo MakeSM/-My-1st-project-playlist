@@ -1,10 +1,11 @@
-import { renderImgRock } from './info-panale/info-rock-img.js';
-import { renderInfoPanelRock } from './info-panale/info-panale-rock.js';
-import { renderPlaylist } from './playlist-rock/playlist.js';
+import { renderImgRock } from './info-panale-rock/info-rock-img.js';
+import { renderInfoPanelRock } from './info-panale-rock/info-panale-rock.js';
+import { renderPlaylist } from '../playlist-rock/playlist.js';
 
 export function renderSectionRock() {
    const sectionRock = document.createElement('section');
-   sectionRock.className = 'sectionRock';
+   sectionRock.className = 'sectionSong';
+   sectionRock.dataset.genre = 'rock';
 
    sectionRock.appendChild(renderImgRock());
 

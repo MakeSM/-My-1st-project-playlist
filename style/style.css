@@ -19,6 +19,7 @@ body {
 	padding-top: 20vh;
 }
 
+/* --------------------------------------------------------------------- */
 /* header */
 header {
 	width: 100%;
@@ -43,6 +44,7 @@ header {
 	font-weight: 700;
 }
 
+/* ------------------------------------------------------------------ */
 /* main */
 .mainContent {
 	width: 1280px;
@@ -50,6 +52,7 @@ header {
 	background-color: #121212;
 	}
 
+	/* ----------------------------------------------------------------- */
 	/* title-btn-wrapper */
 .tytleBtnWrapper {
 	display: flex;
@@ -82,6 +85,8 @@ header {
 	flex-grow: 1;
 }
 
+
+/* ---------------------------------------------------------------------- */
 /* input */
 .searchWrapper {
 	display: flex;
@@ -132,26 +137,31 @@ header {
 	background-color: #121212;
 }
 
-/* section */
+/*-------------------------------------------------------------- section */
 
-/* section-rock */
+/* ------------------------------------------------- */
 .playlistsWrapper {
 	display: flex;
-	padding-left: 48px;
+	padding-left: 36px;
 	padding-top: 24px;
 }
 
-.sectionRock {
+/* section-rock */
+.sectionSong {
 	display: flex;
-	width: 570px;
-	height: 540px;
+	max-width: 580px;
+	max-height: 580px;
 	border-radius: 4px;
 	background: #1C1C1C;
 	flex-wrap: wrap;
+	margin-left: 12px;
+	flex-grow: 1;
+	padding-bottom: 47px;
+	
 }
 
 /* img */
-.imgRock {
+.imgPlaylist {
 	width: 170px;
 	height: 176px;
 	border-radius: 4px;
@@ -159,12 +169,15 @@ header {
 	margin-left: 36px;
 	margin-top: 24px;
 }
-/* info panel */
+
+/* ----------------------------------------------------------------- */
+/* --- info panel --- */
 .infoPlayListWrapper {
 	display: flex;
 	flex-direction: column;
 	margin-top: 31px;
 	margin-left: 24px;
+	line-height: 24px;
 }
 /* info panale rock */
 .spanList {
@@ -190,7 +203,6 @@ header {
 	color: #8A8A8A;
 	font-size: 14px;
 	font-weight: 400;
-	line-height: 24px; /* 171.429% */
 	margin-top: 10px;
 }
 /* artist */
@@ -200,13 +212,41 @@ header {
 	color: #FFF;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 24px; /* 150% */
 	margin-top: 11px;
 }
-/* song */
+
+/* ---------------------------------------------------------------- */
+/* --- song --- */
 .songContainer {
 	display: flex;
+	margin-top: 20px;
+	margin-left: 58px;
+}
+
+.musicElementWrapper {
+	display: flex;
 	flex-direction: column;
+}
+
+.imgSongElement {
+	width: 48px;
+	height: 48px;
+	border-radius: 4px;
+	margin-right: 12px;
+}
+
+.nameSongElement {
+	display: flex;
+}
+
+.artistElement {
+	color: #FFF;
+	font-weight: 500;
+}
+
+.titleElement {
+	color: #8A8A8A;
+	font-weight: 400;
 }
 
 .audioElement {
@@ -214,6 +254,7 @@ header {
 	filter: invert(100%);
 	border-radius: 4px;
 	max-width: 100%;
+	margin-top: 10px;
 }
 
 .audioElement::-webkit-media-controls-enclosure {
@@ -221,3 +262,4 @@ header {
 	color: #fff;
 }
 
+/* --------------------------------------- section Rap */

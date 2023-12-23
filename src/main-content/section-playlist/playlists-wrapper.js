@@ -1,11 +1,13 @@
 import { renderSectionRock } from './section-one/section-rock.js';
+import { renderSectionRap } from './section-two/section-rap.js';
 
 export function renderPlaylistsWrapper() {
    const playlistsWrapper = document.createElement('div');
    playlistsWrapper.className = 'playlistsWrapper';
 
-   const rockElement = renderSectionRock();
-   playlistsWrapper.appendChild(rockElement);
+   playlistsWrapper.appendChild(renderSectionRock());
+
+   playlistsWrapper.appendChild(renderSectionRap());
 
    return playlistsWrapper;
 }

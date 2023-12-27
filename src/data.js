@@ -6,6 +6,7 @@ let songs = [
       src: '../style/assets/images/luverance.jpg',
       duration: 2.55,
       url: '../style/assets/sound/Luverance - Душа моя.mp3',
+      hot: true,
    },
    {
       genre: 'rock',
@@ -14,6 +15,7 @@ let songs = [
       src: '../style/assets/images/otpyskai.jpg',
       duration: 3.27,
       url: '../style/assets/sound/Три дня дождя - Отпускай.mp3',
+      hot: false,
    },
    {
       genre: 'rock',
@@ -22,6 +24,7 @@ let songs = [
       src: '../style/assets/images/luverance.jpg',
       duration: 2.07,
       url: '../style/assets/sound/Luverance - Океаны.mp3',
+      hot: true,
    },
    {
       genre: 'rock',
@@ -30,6 +33,7 @@ let songs = [
       src: '../style/assets/images/saypink.jpg',
       duration: 2.36,
       url: '../style/assets/sound/saypink! - РЕБЕНОК САТАНЫ.mp3',
+      hot: false,
    },
    // -----------------------------------------------------------
    {
@@ -39,6 +43,7 @@ let songs = [
       src: '../style/assets/images/ghostemane-a.jpg',
       duration: 2.07,
       url: '../style/assets/sound/Ghostemane - Andromeda.mp3',
+      hot: true,
    },
    {
       genre: 'rap',
@@ -47,6 +52,7 @@ let songs = [
       src: '../style/assets/images/ghostemane.jpg',
       duration: 2.31,
       url: '../style/assets/sound/Ghostemane - Fed Up.mp3',
+      hot: true,
    },
    {
       genre: 'rap',
@@ -55,6 +61,7 @@ let songs = [
       src: '../style/assets/images/kaiba.jpg',
       duration: 1.35,
       url: '../style/assets/sound/KAIBA feat. Kamaara - Overdose.mp3',
+      hot: false,
    },
    {
       genre: 'rap',
@@ -63,6 +70,7 @@ let songs = [
       src: '../style/assets/images/ogbuda.jpg',
       duration: 2.4,
       url: '../style/assets/sound/OG Buda, дора - Капли.mp3',
+      hot: false,
    },
 ];
 
@@ -105,8 +113,8 @@ export function getSearchTherm() {
 export function setSortDirection(direction) {
    sortDirection = direction;
    songs.sort((a, b) => {
-      if (direction === 'asc') return a.year - b.year;
-      return b.year - a.year;
+      if (direction === 'asc') return a.artist.localeCompare(b.artist);
+      return b.artist.localeCompare(a.artist);
    });
 
    subscriber();

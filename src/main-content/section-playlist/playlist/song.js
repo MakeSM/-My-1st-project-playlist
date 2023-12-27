@@ -13,6 +13,13 @@ export function renderSong(song) {
    const nameSongElement = document.createElement('div');
    nameSongElement.className = 'nameSongElement';
 
+   const hotElement = document.createElement('img');
+   hotElement.className = 'hotElement';
+   hotElement.src = '../../../../style/assets/images/Rectangle 108.svg';
+   if (song.hot === true) {
+      nameSongElement.appendChild(hotElement);
+   }
+
    const artistElement = document.createElement('div');
    artistElement.className = 'artistElement';
    artistElement.textContent = song.artist + '-';

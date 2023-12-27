@@ -20,6 +20,16 @@ body {
 }
 
 /* --------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------ */
+/* main */
+.mainContent {
+	min-width: 1280px;
+	min-height: 781px;
+	background-color: #121212;
+	}
+
 /* header */
 header {
 	width: 100%;
@@ -43,14 +53,6 @@ header {
 	font-size: 18px;
 	font-weight: 700;
 }
-
-/* ------------------------------------------------------------------ */
-/* main */
-.mainContent {
-	width: 1280px;
-	height: 781px;
-	background-color: #121212;
-	}
 
 	/* ----------------------------------------------------------------- */
 	/* title-btn-wrapper */
@@ -116,6 +118,7 @@ header {
 	background-color: #1D1D1D;
 	color: #FFF;
 	margin-left: 22px;
+	color: #F6BD41;
 }
 
 /* sort */
@@ -135,6 +138,21 @@ header {
 	border: none; 
 	outline: none;
 	background-color: #121212;
+}
+
+.formatSection {
+	display: flex;
+	margin-left: 28px;
+	gap: 12px;
+}
+
+.format {
+	width: 36px;
+	height: 36px;
+	border-radius: 2px;
+	border: none;
+	background: #1D1D1D;
+
 }
 
 /*-------------------------------------------------------------- section */
@@ -226,6 +244,11 @@ header {
 .musicElementWrapper {
 	display: flex;
 	flex-direction: column;
+}
+
+.hotElement {
+	width: 12px;
+	height: 12px;
 }
 
 .imgSongElement {

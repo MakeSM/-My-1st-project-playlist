@@ -6,7 +6,7 @@ export function renderPlaylist() {
 
    const songsContainer = document.createElement('div');
    const sectionsContainer = document.createElement('div');
-   const sections = document.querySelectorAll('.sectionSong');
+   const sections = Array.from(document.querySelectorAll('[sectionSong]'));
 
    for (let i = 0; i < songs.length; i++) {
       const songElement = renderSong(songs[i]);
@@ -19,9 +19,11 @@ export function renderPlaylist() {
             break;
          }
       }
-      sections.forEach((section) => sectionsContainer.appendChild(section));
-      songsContainer.appendChild(sectionsContainer);
    }
 
+   sections.forEach((section) => sectionsContainer.appendChild(section));
+   songsContainer.appendChild(sectionsContainer);
+
+   console.log();
    return songsContainer;
 }
